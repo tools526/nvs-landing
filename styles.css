@@ -850,7 +850,7 @@ a { color: inherit; text-decoration: none; }
 .final-panel .h-display { color: var(--bg-card); }
 .final-panel .lead { color: rgba(245, 239, 228, 0.7); margin: 24px auto 40px; }
 .final-panel .btn-primary { background: var(--accent); border-color: var(--accent); }
-.final-panel .btn-primary:hover { background: #fff; color: var(--ink); border-color: #fff; }
+.final-panel .btn-primary:hover { background: #c4b5fd; color: var(--ink); border-color: #c4b5fd; }
 .final-bg-pattern {
   position: absolute;
   inset: 0;
