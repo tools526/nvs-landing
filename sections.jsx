@@ -94,6 +94,7 @@ function Products() {
       name: 'Jobescape',
       tag: 'CAREER · AI COACH',
       desc: 'A personal AI plan for landing your next role — skills tracking, daily streaks, AI assistants for interviews and outreach, and certified completion.',
+      url: 'https://jobescape.me',
     },
     {
       id: 2,
@@ -101,6 +102,7 @@ function Products() {
       name: 'Genescape',
       tag: 'CREATIVE · IMAGE & VIDEO',
       desc: 'Pick a character, pick an app, done. A studio of AI image, video and music apps for creators — from headshots and portraits to viral video formats.',
+      url: 'https://genescape-go.vercel.app/artist/new',
     },
   ];
 
@@ -133,7 +135,7 @@ function Products() {
                 <span className="muted" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.04em' }}>
                   PRODUCT 0{p.id}
                 </span>
-                <a href="#" className="arrow-link">
+                <a href={p.url} target="_blank" rel="noopener noreferrer" className="arrow-link">
                   Learn more
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M3 7h8m0 0L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
