@@ -412,7 +412,7 @@ function PulseVis() {
 /* -------- CAPABILITIES -------- */
 function Capabilities() {
   const items = [
-    { n: '01', title: 'AI automation systems',         desc: 'We design workflows that remove repetitive work and reduce operational load.' },
+    { n: '01', title: 'AI automation systems',         desc: 'We automate repetitive work and cut operational load.' },
     { n: '02', title: 'Internal tools and platforms',  desc: 'We build custom tools that teams actually use daily.' },
     { n: '03', title: 'Data and decision systems',     desc: 'We turn data into systems that guide real decisions.' },
     { n: '04', title: 'Scalable product infrastructure', desc: 'We build foundations that grow with your business.' },
