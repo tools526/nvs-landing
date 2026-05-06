@@ -123,7 +123,7 @@ function Products() {
       <div className="products-grid">
         {products.map((p, i) => (
           <Reveal key={p.id} delay={i * 80}>
-            <article className="product-card">
+            <article className="product-card" onClick={() => window.open(p.url, '_blank', 'noopener,noreferrer')} style={{ cursor: 'pointer' }}>
               <div className="product-card-head">
                 <div className="product-mark" data-i={p.id}>{p.mark}</div>
                 <span className="product-tag">{p.tag}</span>
