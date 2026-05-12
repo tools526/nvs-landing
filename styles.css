@@ -667,7 +667,6 @@ a { color: inherit; text-decoration: none; }
   border-radius: 18px;
   overflow: hidden;
   aspect-ratio: 4 / 3;
-  background: var(--bg-elev);
   border: 1px solid var(--rule);
 }
 .team-photo-cell img {
@@ -681,7 +680,6 @@ a { color: inherit; text-decoration: none; }
 .team-photo-placeholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--bg-elev) 0%, var(--rule) 100%);
 }
 @media (max-width: 768px) {
   .team-photos-panel { padding: 36px 0 32px; }
