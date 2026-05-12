@@ -557,6 +557,43 @@ function CaseStudies() {
   );
 }
 
+/* -------- TEAM PHOTOS -------- */
+function TeamPhotos() {
+  // Placeholder slots — replace src values with real photo paths when ready
+  const photos = [
+    { id: 1, src: null },
+    { id: 2, src: null },
+    { id: 3, src: null },
+    { id: 4, src: null },
+    { id: 5, src: null },
+    { id: 6, src: null },
+    { id: 7, src: null },
+    { id: 8, src: null },
+    { id: 9, src: null },
+  ];
+
+  return (
+    <section className="section container team-photos-section">
+      <div className="panel team-photos-panel">
+        <div className="team-photos-head">
+          <span className="eyebrow">Section 07 — People</span>
+          <h2 className="h-section">Our team</h2>
+        </div>
+        <div className="team-photos-grid">
+          {photos.map(p => (
+            <div className="team-photo-cell" key={p.id}>
+              {p.src
+                ? <img src={p.src} alt="" loading="lazy" />
+                : <div className="team-photo-placeholder" />
+              }
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* -------- TEAM -------- */
 function Team() {
   const team = [
@@ -840,5 +877,5 @@ function Footer() {
 
 Object.assign(window, {
   Reveal, Nav, Hero, Products, Capabilities, HowWeWork,
-  SocialProof, CaseStudies, Team, Careers, FinalCTA, Footer,
+  SocialProof, CaseStudies, TeamPhotos, Team, Careers, FinalCTA, Footer,
 });
