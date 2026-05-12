@@ -659,6 +659,7 @@ a { color: inherit; text-decoration: none; }
   gap: 16px;
 }
 .team-photo-cell {
+  position: relative;
   border-radius: 28px;
   overflow: hidden;
   aspect-ratio: 16 / 9;
@@ -675,6 +676,37 @@ a { color: inherit; text-decoration: none; }
 .team-photo-placeholder {
   width: 100%;
   height: 100%;
+}
+.team-photo-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 20px 18px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.team-photo-cell:hover .team-photo-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+.team-photo-name {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+}
+.team-photo-role {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
 }
 @media (max-width: 768px) {
   .team-photos-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }

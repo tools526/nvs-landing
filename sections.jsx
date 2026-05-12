@@ -559,17 +559,16 @@ function CaseStudies() {
 
 /* -------- TEAM -------- */
 function Team() {
-  // Replace src values with real photo paths when ready
   const photos = [
-    { id: 1, src: null },
-    { id: 2, src: null },
-    { id: 3, src: null },
-    { id: 4, src: null },
-    { id: 5, src: null },
-    { id: 6, src: null },
-    { id: 7, src: null },
-    { id: 8, src: null },
-    { id: 9, src: null },
+    { id: 1, src: null, name: 'Darkhan Tynyshtyk', role: 'Product Designer' },
+    { id: 2, src: null, name: 'Team Member', role: 'Role' },
+    { id: 3, src: null, name: 'Team Member', role: 'Role' },
+    { id: 4, src: null, name: 'Team Member', role: 'Role' },
+    { id: 5, src: null, name: 'Team Member', role: 'Role' },
+    { id: 6, src: null, name: 'Team Member', role: 'Role' },
+    { id: 7, src: null, name: 'Team Member', role: 'Role' },
+    { id: 8, src: null, name: 'Team Member', role: 'Role' },
+    { id: 9, src: null, name: 'Team Member', role: 'Role' },
   ];
 
   return (
@@ -582,9 +581,13 @@ function Team() {
         {photos.map(p => (
           <div className="team-photo-cell" key={p.id}>
             {p.src
-              ? <img src={p.src} alt="" loading="lazy" />
+              ? <img src={p.src} alt={p.name} loading="lazy" />
               : <div className="team-photo-placeholder" />
             }
+            <div className="team-photo-info">
+              <span className="team-photo-name">{p.name}</span>
+              <span className="team-photo-role">{p.role}</span>
+            </div>
           </div>
         ))}
       </div>
