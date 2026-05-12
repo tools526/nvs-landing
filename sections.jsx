@@ -30,8 +30,8 @@ function Nav() {
           <img src="assets/nvs-logo.svg" alt="NVS" className="nav-logo-flag" />
         </a>
         <ul className="nav-links">
+          <li><a href="#">Company</a></li>
           <li><a href="#products">Products</a></li>
-          <li><a href="#company">Company</a></li>
           <li><a href="#careers">Careers</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
