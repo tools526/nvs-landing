@@ -57,20 +57,16 @@ function Hero() {
         </div>
 
         <h1 className="h-display hero-headline">
-          We build AI-native systems<br/>
-          that <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>automate</em> real work
+          We build AI-powered products for the world.
         </h1>
 
         <p className="lead hero-sub">
-          From internal tools to scalable products, NVS designs and builds systems that replace manual processes and unlock faster execution.
+          Nomad Ventures Studio is a venture studio that creates and scales B2C digital products for a global audience — with the people we respect, on problems that actually matter.
         </p>
 
         <div className="hero-ctas">
           <a href="#products" className="btn btn-primary">
-            View products
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M3 7h8m0 0L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+            See what we're building →
           </a>
           <a href="#contact" className="btn btn-ghost">Work with us</a>
         </div>
