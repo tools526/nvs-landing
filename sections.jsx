@@ -560,15 +560,15 @@ function CaseStudies() {
 /* -------- TEAM -------- */
 function Team() {
   const photos = [
-    { id: 1, src: null, name: 'Darkhan Tynyshtyk', role: 'Product Designer' },
-    { id: 2, src: null, name: 'Team Member', role: 'Role' },
-    { id: 3, src: null, name: 'Team Member', role: 'Role' },
-    { id: 4, src: null, name: 'Team Member', role: 'Role' },
-    { id: 5, src: null, name: 'Team Member', role: 'Role' },
-    { id: 6, src: null, name: 'Team Member', role: 'Role' },
-    { id: 7, src: null, name: 'Team Member', role: 'Role' },
-    { id: 8, src: null, name: 'Team Member', role: 'Role' },
-    { id: 9, src: null, name: 'Team Member', role: 'Role' },
+    { id: 1, src: 'uploads/image.png', name: 'Team Member', role: 'Role' },
+    { id: 2, src: 'uploads/photo_2026-05-12_15-50-31.jpg', name: 'Team Member', role: 'Role' },
+    { id: 3, src: 'uploads/photo_2026-05-12_15-50-49.jpg', name: 'Team Member', role: 'Role' },
+    { id: 4, src: 'uploads/photo_2026-05-12_15-50-58.jpg', name: 'Team Member', role: 'Role' },
+    { id: 5, src: 'uploads/photo_2026-05-12_15-51-14.jpg', name: 'Team Member', role: 'Role' },
+    { id: 6, src: 'uploads/photo_2026-05-12_15-51-25.jpg', name: 'Team Member', role: 'Role' },
+    { id: 7, src: 'uploads/photo_2026-05-12_15-51-56.jpg', name: 'Team Member', role: 'Role' },
+    { id: 8, src: 'uploads/photo_2026-05-12_15-51-59.jpg', name: 'Team Member', role: 'Role' },
+    { id: 9, src: 'uploads/photo_2026-05-12_15-52-03.jpg', name: 'Team Member', role: 'Role' },
   ];
 
   return (

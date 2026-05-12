@@ -664,6 +664,15 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   aspect-ratio: 16 / 9;
   border: 1px solid var(--rule);
+  transition: filter 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+.team-photos-grid:has(.team-photo-cell:hover) .team-photo-cell {
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+.team-photos-grid:has(.team-photo-cell:hover) .team-photo-cell:hover {
+  filter: grayscale(0);
+  opacity: 1;
 }
 .team-photo-cell img {
   width: 100%;
