@@ -574,21 +574,19 @@ function Team() {
 
   return (
     <section className="section container team-photos-section" id="team">
-      <div className="panel team-photos-panel">
-        <div className="team-photos-head">
-          <span className="eyebrow">Section 07 — People</span>
-          <h2 className="h-section">Our team</h2>
-        </div>
-        <div className="team-photos-grid">
-          {photos.map(p => (
-            <div className="team-photo-cell" key={p.id}>
-              {p.src
-                ? <img src={p.src} alt="" loading="lazy" />
-                : <div className="team-photo-placeholder" />
-              }
-            </div>
-          ))}
-        </div>
+      <div className="team-photos-head">
+        <span className="eyebrow">Section 07 — People</span>
+        <h2 className="h-section">Our team</h2>
+      </div>
+      <div className="team-photos-grid">
+        {photos.map(p => (
+          <div className="team-photo-cell" key={p.id}>
+            {p.src
+              ? <img src={p.src} alt="" loading="lazy" />
+              : <div className="team-photo-placeholder" />
+            }
+          </div>
+        ))}
       </div>
     </section>
   );
