@@ -557,9 +557,9 @@ function CaseStudies() {
   );
 }
 
-/* -------- TEAM PHOTOS -------- */
-function TeamPhotos() {
-  // Placeholder slots — replace src values with real photo paths when ready
+/* -------- TEAM -------- */
+function Team() {
+  // Replace src values with real photo paths when ready
   const photos = [
     { id: 1, src: null },
     { id: 2, src: null },
@@ -573,7 +573,7 @@ function TeamPhotos() {
   ];
 
   return (
-    <section className="section container team-photos-section">
+    <section className="section container team-photos-section" id="team">
       <div className="panel team-photos-panel">
         <div className="team-photos-head">
           <span className="eyebrow">Section 07 — People</span>
@@ -594,175 +594,6 @@ function TeamPhotos() {
   );
 }
 
-/* -------- TEAM -------- */
-function Team() {
-  const team = [
-    { i: 1, role: 'Head of Product Engineering at NVS',  name: 'Alex Kim',   tone: 'warm' },
-    { i: 2, role: 'Head of Systems Design at NVS',        name: 'Sara Chen',  tone: 'sage' },
-    { i: 3, role: 'Lead AI Infrastructure at NVS',        name: 'Daniel Lee', tone: 'slate' },
-    { i: 4, role: 'Head of Operations at NVS',            name: 'Nina Patel', tone: 'plum' },
-    { i: 5, role: 'Senior Product Engineer at NVS',       name: 'Jordan Rios', tone: 'ochre' },
-    { i: 6, role: 'Staff Designer at NVS',                name: 'Mira Solis',  tone: 'teal' },
-  ];
-
-  const railRef = useRef(null);
-  const [progress, setProgress] = useState(0);
-  const [atStart, setAtStart] = useState(true);
-  const [atEnd, setAtEnd] = useState(false);
-
-  useEffect(() => {
-    const el = railRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const p = max > 0 ? el.scrollLeft / max : 0;
-      setProgress(p);
-      setAtStart(el.scrollLeft <= 4);
-      setAtEnd(el.scrollLeft >= max - 4);
-    };
-    onScroll();
-    el.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-    return () => {
-      el.removeEventListener('scroll', onScroll);
-      window.removeEventListener('resize', onScroll);
-    };
-  }, []);
-
-  const scrollBy = (dir) => {
-    const el = railRef.current;
-    if (!el) return;
-    const card = el.querySelector('.team-card');
-    const step = card ? card.getBoundingClientRect().width + 20 : 300;
-    el.scrollBy({ left: dir * step * 1.5, behavior: 'smooth' });
-  };
-
-  return (
-    <section className="section container team-section" id="team">
-      <Reveal>
-        <div className="team-panel">
-          <div className="team-intro">
-            <span className="eyebrow">Section 08 — Team</span>
-            <h2 className="h-section">The team building NVS</h2>
-            <p className="lead">
-              Small by design. Senior by default. We bring together engineers, designers, and operators who care about shipping systems that actually get used.
-            </p>
-            <div className="btn-cta">
-              <a href="#careers" className="btn-light">
-                Open roles
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M3 7h8m0 0L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <div className="team-rail-wrap">
-            <div className="team-rail" ref={railRef}>
-              {team.map((m, idx) => (
-                <article className="team-card" key={m.name}>
-                  <div className="team-portrait"><PortraitVis tone={m.tone} idx={idx} /></div>
-                  <div className="team-card-overlay">
-                    <div>
-                      <h3 className="team-card-role">{m.role}</h3>
-                      <p className="team-card-name">{m.name}</p>
-                    </div>
-                    <div className="team-card-arrow">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <path d="M3 7h8m0 0L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <div className="team-rail-foot">
-              <div className="team-progress">
-                <div className="team-progress-bar" style={{ width: `${30 + progress * 70}%`, transform: `translateX(${progress * 200}%)` }} />
-              </div>
-              <div className="team-controls">
-                <button className="team-ctrl" onClick={() => scrollBy(-1)} disabled={atStart} aria-label="Previous">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M11 7H3m0 0l3.5-3.5M3 7l3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-                <button className="team-ctrl" onClick={() => scrollBy(1)} disabled={atEnd} aria-label="Next">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M3 7h8m0 0L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Reveal>
-    </section>
-  );
-}
-
-/* Stylized portrait placeholders — abstract, animated, on-brand. Drop in real photos by replacing this component. */
-function PortraitVis({ tone, idx }) {
-  const t = useClock();
-  const palettes = {
-    warm:  { bg: '#3a2519', mid: '#7a4a30', hi: '#D97757', skin: '#e8b696' },
-    sage:  { bg: '#1f2a23', mid: '#3e5a48', hi: '#7BAF8A', skin: '#d9c4a8' },
-    slate: { bg: '#1a1f2a', mid: '#384458', hi: '#8aa1c4', skin: '#cbb39a' },
-    plum:  { bg: '#2a1c2e', mid: '#4d3552', hi: '#b58dc4', skin: '#e0c4b0' },
-    ochre: { bg: '#2e2415', mid: '#5d4720', hi: '#d4a542', skin: '#dcb594' },
-    teal:  { bg: '#152a2c', mid: '#2c5256', hi: '#5fb1b7', skin: '#cdb4a0' },
-  };
-  const p = palettes[tone] || palettes.warm;
-  const phase = Math.sin(t * 0.5 + idx) * 4;
-
-  return (
-    <svg viewBox="0 0 280 380" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <linearGradient id={`bg-${idx}`} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor={p.bg}/>
-          <stop offset="100%" stopColor={p.mid}/>
-        </linearGradient>
-        <radialGradient id={`light-${idx}`} cx="0.3" cy="0.25" r="0.7">
-          <stop offset="0%" stopColor={p.hi} stopOpacity="0.4"/>
-          <stop offset="100%" stopColor={p.hi} stopOpacity="0"/>
-        </radialGradient>
-      </defs>
-      <rect width="280" height="380" fill={`url(#bg-${idx})`} />
-      <rect width="280" height="380" fill={`url(#light-${idx})`} />
-
-      {/* shoulders */}
-      <path d={`M -20 380 Q 60 ${260 + phase} 140 ${265 + phase} Q 220 ${260 + phase} 300 380 Z`}
-        fill={p.mid} opacity="0.95"/>
-      <path d={`M 50 380 Q 95 ${300 + phase * 0.5} 140 ${290 + phase * 0.5} Q 185 ${300 + phase * 0.5} 230 380 Z`}
-        fill={p.bg}/>
-
-      {/* head silhouette */}
-      <ellipse cx={140 + phase * 0.3} cy={170 + phase * 0.2} rx="58" ry="72" fill={p.skin} opacity="0.95"/>
-      {/* hair / shadow on top */}
-      <path d={`M ${82 + phase * 0.3} ${150 + phase * 0.2} Q ${140 + phase * 0.3} ${85 + phase * 0.2} ${198 + phase * 0.3} ${150 + phase * 0.2} Q ${190 + phase * 0.3} ${120 + phase * 0.2} ${140 + phase * 0.3} ${108 + phase * 0.2} Q ${90 + phase * 0.3} ${120 + phase * 0.2} ${82 + phase * 0.3} ${150 + phase * 0.2} Z`}
-        fill={p.bg} opacity="0.85"/>
-      {/* face shadow */}
-      <ellipse cx={158 + phase * 0.3} cy={180 + phase * 0.2} rx="40" ry="60" fill={p.bg} opacity="0.18"/>
-
-      {/* subtle film grain via dots */}
-      {Array.from({ length: 40 }).map((_, k) => {
-        const x = (k * 53.7) % 280;
-        const y = (k * 91.3) % 380;
-        return <circle key={k} cx={x} cy={y} r="0.5" fill="#fff" opacity="0.06"/>;
-      })}
-
-      {/* highlight scan line */}
-      <rect
-        x="0"
-        y={((t * 60) % 460) - 80}
-        width="280"
-        height="40"
-        fill={p.hi}
-        opacity="0.04"
-      />
-    </svg>
-  );
-}
 
 /* -------- CAREERS -------- */
 function Careers() {
@@ -877,5 +708,5 @@ function Footer() {
 
 Object.assign(window, {
   Reveal, Nav, Hero, Products, Capabilities, HowWeWork,
-  SocialProof, CaseStudies, TeamPhotos, Team, Careers, FinalCTA, Footer,
+  SocialProof, CaseStudies, Team, Careers, FinalCTA, Footer,
 });
