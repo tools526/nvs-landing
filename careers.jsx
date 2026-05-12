@@ -17,9 +17,7 @@ function CareersNav() {
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <div className="nav-cta">
-          <a href="#open-roles" className="btn btn-dark btn-sm">
-            Open roles <span className="nav-roles-badge">{openCount}</span>
-          </a>
+          <a href="index.html#careers" className="btn btn-dark btn-sm">Work with us</a>
         </div>
       </nav>
     </div>
