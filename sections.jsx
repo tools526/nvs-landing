@@ -32,11 +32,11 @@ function Nav() {
         <ul className="nav-links">
           <li><a href="#">Company</a></li>
           <li><a href="#products">Products</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li><a href="#careers">Careers</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div className="nav-cta">
-          <a href="#contact" className="btn btn-dark btn-sm">Work with us</a>
+          <a href="careers.html" className="btn btn-dark btn-sm">Open roles <span className="nav-roles-badge">4</span></a>
         </div>
       </nav>
     </div>
