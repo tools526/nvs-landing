@@ -32,7 +32,7 @@ function Nav() {
         <ul className="nav-links">
           <li><a href="#">Company</a></li>
           <li><a href="#products">Products</a></li>
-          <li><a href="#careers">Careers</a></li>
+          <li><a href="careers.html">Careers</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div className="nav-cta">
@@ -608,7 +608,7 @@ function Careers() {
             <p className="lead" style={{ marginBottom: 32 }}>
               We're building systems that change how work gets done. If you care about speed, clarity, and real impact — you'll fit here.
             </p>
-            <a href="#" className="btn btn-primary">
+            <a href="careers.html" className="btn btn-primary">
               View open roles
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M3 7h8m0 0L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
