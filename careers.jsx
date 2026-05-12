@@ -13,7 +13,7 @@ function CareersNav() {
         <ul className="nav-links">
           <li><a href="index.html">Company</a></li>
           <li><a href="index.html#products">Products</a></li>
-          <li><a href="index.html#careers" className="nav-link-active">Careers</a></li>
+          <li><a href="index.html#careers">Careers</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <div className="nav-cta">
