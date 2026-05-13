@@ -49,10 +49,10 @@ function Hero() {
     <section className="hero container">
       <div className="panel hero-panel">
         <div className="hero-eyebrow-row">
-          <span className="eyebrow">AI-native systems</span>
+          <span className="eyebrow">Nomad Ventures Studio</span>
           <span className="eyebrow" style={{ fontFamily: 'var(--mono)', textTransform: 'none', letterSpacing: '0.04em' }}>
             <span style={{ background: 'var(--accent)', width: 6, height: 6, borderRadius: '50%' }}></span>
-            v.2026 — now shipping
+            Build. Scale. Repeat.
           </span>
         </div>
 
