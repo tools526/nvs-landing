@@ -153,7 +153,7 @@ function ApplyForm({ role }) {
           <div key={i} className={`apply-step-segment ${i < step ? 'done' : ''} ${i === step - 1 ? 'active' : ''}`} />
         ))}
       </div>
-      <p className="apply-step-label">Step {step} of {totalSteps} — {stepLabels[step - 1]}</p>
+      {step <= totalSteps && <p className="apply-step-label">Step {step} of {totalSteps} — {stepLabels[step - 1]}</p>}
 
       <form onSubmit={step === totalSteps ? (e) => { e.preventDefault(); setStep(totalSteps + 1); } : next}>
         {step === 1 && (
