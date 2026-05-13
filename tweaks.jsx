@@ -2,7 +2,7 @@
 const { useEffect } = React;
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "accent": "#7C5CFF",
+  "accent": "#12A594",
   "tone": "warm",
   "density": "compact",
   "dark": true,
@@ -13,7 +13,7 @@ const ACCENT_PRESETS = {
   '#D97757': { ink: '#B85A3B', soft: '#F2D4C2', tint: '#FBE9DD' },
   '#1F3A8A': { ink: '#152A66', soft: '#C8D2EC', tint: '#E0E7F7' },
   '#2D5F3F': { ink: '#1F4530', soft: '#C1D7C8', tint: '#DCE7DF' },
-  '#7C5CFF': { ink: '#5A3FD9', soft: '#D6CCFA', tint: '#ECE6FF' },
+  '#12A594': { ink: '#0D8478', soft: '#D0F0EC', tint: '#E6FAF7' },
   '#1A1A1A': { ink: '#000000', soft: '#CDCDCD', tint: '#E8E8E8' },
 };
 
@@ -26,7 +26,7 @@ function NvsTweaks() {
     root.dataset.density = t.density;
     root.dataset.tone = t.tone;
     root.dataset.theme = t.dark ? 'dark' : 'light';
-    const preset = ACCENT_PRESETS[t.accent] || ACCENT_PRESETS['#D97757'];
+    const preset = ACCENT_PRESETS[t.accent] || ACCENT_PRESETS['#12A594'];
     root.style.setProperty('--accent', t.accent);
     root.style.setProperty('--accent-ink', preset.ink);
     root.style.setProperty('--accent-soft', preset.soft);
