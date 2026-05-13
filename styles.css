@@ -11,11 +11,11 @@
   --rule: #E5DCC9;
   --rule-2: #D9CFB8;
 
-  /* Accent (purple) */
-  --accent: #7C5CFF;
-  --accent-ink: #5A3FD9;
-  --accent-soft: #E8D9FF;
-  --accent-tint: rgba(124, 92, 255, 0.14);
+  /* Accent (green) */
+  --accent: #12A594;
+  --accent-ink: #0D8478;
+  --accent-soft: #D0F0EC;
+  --accent-tint: rgba(18, 165, 148, 0.14);
 
   /* Typography */
   --serif: "Fraunces", "Iowan Old Style", "Apple Garamond", Georgia, serif;
@@ -46,8 +46,8 @@
   --ink-4: #6B665B;
   --rule: #2C2A24;
   --rule-2: #3A3830;
-  --accent-tint: rgba(124, 92, 255, 0.16);
-  --accent-soft: rgba(124, 92, 255, 0.18);
+  --accent-tint: rgba(18, 165, 148, 0.16);
+  --accent-soft: rgba(18, 165, 148, 0.18);
 }
 
 [data-tone="cool"] {
