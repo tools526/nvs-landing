@@ -73,7 +73,7 @@ function Hero() {
         </div>
 
         <div className="hero-graph-wrap">
-          <span className="hero-graph-corner">SYS / WORKFLOW MAP</span>
+          <span className="hero-graph-corner">NVS / WORKFLOW MAP</span>
           <window.HeroGraph />
           <span className="hero-graph-caption">11 nodes · 15 edges · live</span>
         </div>
