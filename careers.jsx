@@ -9,7 +9,7 @@ function CareersNav() {
       <nav className="nav">
         <a href="index.html" className="nav-logo">
           <img src="assets/nvs-logo.svg" alt="NVS" className="nav-logo-flag" />
-          <span className="nav-logo-name">Nomad Venture</span>
+          <span className="nav-logo-name">Nomad Ventures Studio</span>
         </a>
         <ul className="nav-links">
           <li><a href="index.html">Company</a></li>
