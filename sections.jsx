@@ -421,7 +421,7 @@ function Capabilities() {
     <section className="section container" id="capabilities">
       <Reveal className="section-head">
         <div className="section-head-text">
-          <span className="eyebrow">Section 04 — Capabilities</span>
+          <span className="eyebrow">Section 02 — Capabilities</span>
           <h2 className="h-section" style={{ marginTop: 16 }}>What we do</h2>
         </div>
       </Reveal>
