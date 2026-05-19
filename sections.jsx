@@ -801,8 +801,6 @@ function Footer() {
           <h4 className="footer-col-title">Connect</h4>
           <ul>
             <li><a href="#">hello@nvs.team</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">X / Twitter</a></li>
           </ul>
         </div>
       </div>
