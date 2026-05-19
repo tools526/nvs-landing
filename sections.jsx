@@ -572,21 +572,31 @@ function Team() {
 
 /* -------- MEDIA ABOUT US -------- */
 function MediaAboutUs() {
-  const featured = {
-    outlet: 'TechCrunch',
-    tag: 'FEATURE',
-    headline: 'The studio that ships products in weeks, not years',
-    excerpt: 'NVS is rewriting the playbook for how venture studios operate — replacing months of discovery with AI-native systems that compress time-to-market without sacrificing quality.',
-    href: '#',
-  };
+  const [active, setActive] = React.useState(0);
 
-  const mentions = [
-    { outlet: 'Forbes', headline: 'AI studios are the new accelerators', href: '#' },
-    { outlet: 'The Information', headline: 'How NVS builds products faster than most startups hire', href: '#' },
-    { outlet: 'Sifted', headline: "Central Asia's quiet AI powerhouse", href: '#' },
-    { outlet: 'Product Hunt', headline: '#1 Product of the Week — Jobescape', href: '#' },
-    { outlet: 'YC Alumni Network', headline: 'Operator spotlight: building AI-first from day one', href: '#' },
+  const cards = [
+    {
+      src: 'uploads/photo_2026-05-12_15-50-31.jpg',
+      name: 'NVS in TechCrunch',
+      desc: 'The studio that ships products in weeks, not years — how NVS is rewriting the venture playbook.',
+      href: '#',
+    },
+    {
+      src: 'uploads/photo_2026-05-12_15-50-49.jpg',
+      name: 'Forbes Feature',
+      desc: 'AI studios are the new accelerators. Inside the operators building the next generation of software.',
+      href: '#',
+    },
+    {
+      src: 'uploads/photo_2026-05-12_15-50-58.jpg',
+      name: 'Sifted Report',
+      desc: "Central Asia's quiet AI powerhouse — NVS and the founders building from Almaty to the world.",
+      href: '#',
+    },
   ];
+
+  const prev = () => setActive(a => (a - 1 + cards.length) % cards.length);
+  const next = () => setActive(a => (a + 1) % cards.length);
 
   return (
     <section className="section container" id="media">
@@ -602,37 +612,40 @@ function MediaAboutUs() {
         </div>
       </Reveal>
 
-      <div className="media-layout">
-        {/* Featured article */}
-        <Reveal>
-          <a href={featured.href} className="media-featured panel" target="_blank" rel="noopener noreferrer">
-            <div className="media-featured-meta">
-              <span className="media-outlet">{featured.outlet}</span>
-              <span className="eyebrow" style={{ marginBottom: 0, padding: '4px 10px' }}>{featured.tag}</span>
-            </div>
-            <h3 className="h-card" style={{ marginTop: 16, marginBottom: 12 }}>{featured.headline}</h3>
-            <p className="muted" style={{ fontSize: 15, lineHeight: 1.65 }}>{featured.excerpt}</p>
-            <div className="media-read-more">
-              Read article
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{ marginLeft: 6 }}>
-                <path d="M3 7h8m0 0L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-          </a>
-        </Reveal>
+      <div className="media-carousel">
+        <div className="media-track" style={{ transform: `translateX(calc(-${active} * 33.3333%))` }}>
+          {cards.map((c, i) => (
+            <a key={i} href={c.href} className="media-card" target="_blank" rel="noopener noreferrer">
+              <img src={c.src} alt={c.name} loading="lazy" />
+              <div className="media-card-overlay">
+                <div className="media-play-btn">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M8 6.5l9 4.5-9 4.5V6.5z" fill="currentColor"/>
+                  </svg>
+                </div>
+                <div className="media-card-text">
+                  <span className="media-card-name">{c.name}</span>
+                  <span className="media-card-desc">{c.desc}</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
 
-        {/* Mention list */}
-        <div className="media-mentions">
-          {mentions.map((m, i) => (
-            <Reveal key={i}>
-              <a href={m.href} className="media-mention-row" target="_blank" rel="noopener noreferrer">
-                <span className="media-outlet">{m.outlet}</span>
-                <span className="media-mention-headline">{m.headline}</span>
-                <svg className="media-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3.5 8h9m0 0L8.5 4M12.5 8L8.5 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-            </Reveal>
+        <button className="media-nav media-nav-prev" onClick={prev} aria-label="Previous">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M13 4l-6 6 6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        <button className="media-nav media-nav-next" onClick={next} aria-label="Next">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M7 4l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+
+        <div className="media-dots">
+          {cards.map((_, i) => (
+            <button key={i} className={`media-dot${i === active ? ' active' : ''}`} onClick={() => setActive(i)} aria-label={`Go to slide ${i + 1}`} />
           ))}
         </div>
       </div>
