@@ -593,6 +593,12 @@ function MediaAboutUs() {
       desc: "Central Asia's quiet AI powerhouse — NVS and the founders building from Almaty to the world.",
       href: '#',
     },
+    {
+      src: 'uploads/photo_2026-05-12_15-51-14.jpg',
+      name: 'Product Hunt #1',
+      desc: 'Jobescape topped the charts — Product of the Week and a sign of what AI-native hiring tools can do.',
+      href: '#',
+    },
   ];
 
   const total = cards.length;
