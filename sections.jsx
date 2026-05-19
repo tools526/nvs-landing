@@ -153,7 +153,7 @@ function Products() {
                 <h3 className="h-card product-title">{p.name}</h3>
                 <p className="product-desc product-desc-fadeable">{p.desc}</p>
                 <div className="product-hover-img">
-                  <img src={p.id === 1 ? 'assets/jobescape.png' : 'assets/genescape.png'} alt={p.name + ' preview'} />
+                  <img src={p.id === 1 ? 'assets/jobescape.png' : 'uploads/image (5).png'} alt={p.name + ' preview'} />
                 </div>
               </div>
             </article>
