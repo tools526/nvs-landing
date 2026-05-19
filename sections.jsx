@@ -516,14 +516,6 @@ function CaseStudies() {
               <p className="case-tag">{c.tag}</p>
               <div className="case-metric">{c.metric}</div>
               <p className="case-desc">{c.desc}</p>
-              <div className="case-foot">
-                <a href="#" className="arrow-link">
-                  Read the case
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M3 7h8m0 0L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
-              </div>
             </article>
           </Reveal>
         ))}
