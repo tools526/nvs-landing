@@ -107,8 +107,7 @@ function Products() {
     <section className="section container" id="products">
       <Reveal className="section-head">
         <div className="section-head-text">
-          <span className="eyebrow">Section 03 — Products</span>
-          <h2 className="h-section" style={{ marginTop: 16 }}>
+          <h2 className="h-section" style={{ marginTop: 0 }}>
             Our products
           </h2>
         </div>
@@ -411,32 +410,29 @@ function PulseVis() {
 /* -------- CAPABILITIES -------- */
 function Capabilities() {
   const items = [
-    { n: '01', title: 'AI automation systems',         desc: 'We automate repetitive work and cut operational load.' },
-    { n: '02', title: 'Internal tools and platforms',  desc: 'We build custom tools that teams actually use daily.' },
-    { n: '03', title: 'Data and decision systems',     desc: 'We turn data into systems that guide real decisions.' },
-    { n: '04', title: 'Scalable product infrastructure', desc: 'We build foundations that grow with your business.' },
+    { n: '01', title: 'Build', desc: 'We go from 0 to 1 fast. Idea validation, product design, engineering — all under one roof.' },
+    { n: '02', title: 'Integrate AI', desc: 'Every product we build has AI baked in from day one. Not as a feature. As a foundation.' },
+    { n: '03', title: 'Scale globally', desc: 'We don\'t build for local markets. We build for the world — and we know how to get there.' },
   ];
 
   return (
     <section className="section container" id="capabilities">
       <Reveal className="section-head">
         <div className="section-head-text">
-          <span className="eyebrow">Section 02 — Capabilities</span>
-          <h2 className="h-section" style={{ marginTop: 16 }}>What we do</h2>
+          <h2 className="h-section" style={{ marginTop: 0 }}>What we do</h2>
+          <p className="cap-subheading">From zero to global — that's the only direction we know</p>
         </div>
+        <p className="lead" style={{ maxWidth: '42ch' }}>
+          We identify high-potential markets, assemble the right team, and build products from scratch using modern AI-first approaches. Then we scale them to millions of users.
+        </p>
       </Reveal>
       <Reveal>
         <div className="cap-list">
           {items.map((it) => (
             <div className="cap-item" key={it.n}>
-              <span className="cap-num">{it.n}</span>
+              <span className="cap-badge">{it.n}</span>
               <span className="cap-title">{it.title}</span>
               <p className="cap-desc">{it.desc}</p>
-              <span className="cap-arrow">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M5 10h10m0 0L10 5m5 5l-5 5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
             </div>
           ))}
         </div>
@@ -457,8 +453,7 @@ function HowWeWork() {
     <section className="section container" id="how">
       <Reveal className="section-head">
         <div className="section-head-text">
-          <span className="eyebrow">Section 05 — Principles</span>
-          <h2 className="h-section" style={{ marginTop: 16 }}>How we work</h2>
+          <h2 className="h-section" style={{ marginTop: 0 }}>How we work</h2>
         </div>
         <p className="lead" style={{ maxWidth: '36ch' }}>
           Four principles we keep coming back to. They shape what we say yes to — and what we don't.
@@ -485,8 +480,7 @@ function SocialProof() {
     <section className="section container" id="proof">
       <Reveal>
         <div className="panel proof-panel">
-          <span className="eyebrow" style={{ marginBottom: 24 }}>Section 06 — Trust</span>
-          <h2 className="h-section proof-title" style={{ marginTop: 16 }}>
+          <h2 className="h-section proof-title" style={{ marginTop: 0 }}>
             Trusted by teams<br/>building <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>real</em> products
           </h2>
 
@@ -530,8 +524,7 @@ function CaseStudies() {
     <section className="section container" id="cases">
       <Reveal className="section-head">
         <div className="section-head-text">
-          <span className="eyebrow">Section 07 — Case studies</span>
-          <h2 className="h-section" style={{ marginTop: 16 }}>What we've built</h2>
+          <h2 className="h-section" style={{ marginTop: 0 }}>What we've built</h2>
         </div>
       </Reveal>
       <div className="cases-grid">
@@ -575,7 +568,6 @@ function Team() {
   return (
     <section className="section container team-photos-section" id="team">
       <div className="team-photos-head">
-        <span className="eyebrow">Section 07 — People</span>
         <h2 className="h-section">Our team</h2>
       </div>
       <div className="team-photos-grid">
@@ -604,8 +596,7 @@ function Careers() {
       <Reveal>
         <div className="panel careers-panel">
           <div>
-            <span className="eyebrow">Section 09 — Careers</span>
-            <h2 className="h-section" style={{ marginTop: 16, marginBottom: 24 }}>Join NVS</h2>
+            <h2 className="h-section" style={{ marginTop: 0, marginBottom: 24 }}>Join NVS</h2>
             <p className="lead" style={{ marginBottom: 32 }}>
               We're building systems that change how work gets done. If you care about speed, clarity, and real impact — you'll fit here.
             </p>
@@ -638,11 +629,7 @@ function FinalCTA() {
         <div className="panel final-panel">
           <div className="final-bg-pattern"></div>
           <div style={{ position: 'relative' }}>
-            <span className="eyebrow" style={{ color: 'rgba(245,239,228,0.6)', marginBottom: 24, display: 'inline-flex' }}>
-              <span style={{ background: 'var(--accent)', width: 6, height: 6, borderRadius: '50%' }}></span>
-              Section 10 — Let's talk
-            </span>
-            <h2 className="h-display" style={{ margin: '24px auto 0', maxWidth: '14ch' }}>
+            <h2 className="h-display" style={{ margin: '0 auto 0', maxWidth: '14ch' }}>
               Let's build<br/>
               something <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>real</em>
             </h2>
