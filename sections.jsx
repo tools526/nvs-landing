@@ -570,6 +570,77 @@ function Team() {
 }
 
 
+/* -------- MEDIA ABOUT US -------- */
+function MediaAboutUs() {
+  const featured = {
+    outlet: 'TechCrunch',
+    tag: 'FEATURE',
+    headline: 'The studio that ships products in weeks, not years',
+    excerpt: 'NVS is rewriting the playbook for how venture studios operate — replacing months of discovery with AI-native systems that compress time-to-market without sacrificing quality.',
+    href: '#',
+  };
+
+  const mentions = [
+    { outlet: 'Forbes', headline: 'AI studios are the new accelerators', href: '#' },
+    { outlet: 'The Information', headline: 'How NVS builds products faster than most startups hire', href: '#' },
+    { outlet: 'Sifted', headline: "Central Asia's quiet AI powerhouse", href: '#' },
+    { outlet: 'Product Hunt', headline: '#1 Product of the Week — Jobescape', href: '#' },
+    { outlet: 'YC Alumni Network', headline: 'Operator spotlight: building AI-first from day one', href: '#' },
+  ];
+
+  return (
+    <section className="section container" id="media">
+      <Reveal>
+        <p className="eyebrow" style={{ marginBottom: 20 }}>Recognition</p>
+        <div className="section-head" style={{ marginBottom: 56, alignItems: 'flex-start' }}>
+          <div className="section-head-text">
+            <h2 className="h-section" style={{ marginTop: 0 }}>Media about us</h2>
+          </div>
+          <p className="lead" style={{ maxWidth: '36ch', marginTop: 0 }}>
+            What builders, investors, and journalists say about NVS and our work.
+          </p>
+        </div>
+      </Reveal>
+
+      <div className="media-layout">
+        {/* Featured article */}
+        <Reveal>
+          <a href={featured.href} className="media-featured panel" target="_blank" rel="noopener noreferrer">
+            <div className="media-featured-meta">
+              <span className="media-outlet">{featured.outlet}</span>
+              <span className="eyebrow" style={{ marginBottom: 0, padding: '4px 10px' }}>{featured.tag}</span>
+            </div>
+            <h3 className="h-card" style={{ marginTop: 16, marginBottom: 12 }}>{featured.headline}</h3>
+            <p className="muted" style={{ fontSize: 15, lineHeight: 1.65 }}>{featured.excerpt}</p>
+            <div className="media-read-more">
+              Read article
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{ marginLeft: 6 }}>
+                <path d="M3 7h8m0 0L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+          </a>
+        </Reveal>
+
+        {/* Mention list */}
+        <div className="media-mentions">
+          {mentions.map((m, i) => (
+            <Reveal key={i}>
+              <a href={m.href} className="media-mention-row" target="_blank" rel="noopener noreferrer">
+                <span className="media-outlet">{m.outlet}</span>
+                <span className="media-mention-headline">{m.headline}</span>
+                <svg className="media-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M3.5 8h9m0 0L8.5 4M12.5 8L8.5 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 /* -------- CAREERS -------- */
 function Careers() {
   return (
@@ -678,5 +749,5 @@ function Footer() {
 
 Object.assign(window, {
   Reveal, Nav, Hero, Products, Capabilities, HowWeWork,
-  CaseStudies, Team, Careers, FinalCTA, Footer,
+  CaseStudies, Team, MediaAboutUs, Careers, FinalCTA, Footer,
 });
