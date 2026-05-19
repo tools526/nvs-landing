@@ -459,27 +459,33 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-3);
   line-height: 1.35;
 }
-/* Hover image — hidden by default, fades in on card hover */
+/* Hover image — circular, centered, hidden by default */
 .product-hover-img {
   position: absolute;
   inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
-  transition: opacity 0.45s var(--ease);
   pointer-events: none;
+  transition: opacity 0.45s var(--ease);
 }
 .product-hover-img img {
-  width: 100%;
-  height: 100%;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
   object-fit: cover;
   object-position: top center;
-  transform: scale(1.04);
-  transition: transform 0.45s var(--ease);
+  transform: scale(0.88);
+  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease);
+  box-shadow: 0 0 0 0 rgba(27,26,23,0);
 }
 .product-card-wide:hover .product-hover-img {
   opacity: 1;
 }
 .product-card-wide:hover .product-hover-img img {
   transform: scale(1);
+  box-shadow: 0 20px 60px -12px rgba(27,26,23,0.22);
 }
 /* Body text fades out on hover */
 .product-desc-fadeable {

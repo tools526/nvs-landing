@@ -122,7 +122,7 @@ function Products() {
           </h2>
         </div>
         <p className="lead" style={{ maxWidth: '38ch' }}>
-          Four pillars built to plug into how your team actually operates — independently or as one connected stack.
+          Every product we create starts with a simple question: does this make life meaningfully better for real people? If the answer is yes, we build it.
         </p>
       </Reveal>
 
