@@ -471,9 +471,9 @@ a { color: inherit; text-decoration: none; }
   transition: opacity 0.45s var(--ease);
 }
 .product-hover-img img {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
+  width: 320px;
+  height: 220px;
+  border-radius: 16px;
   object-fit: cover;
   object-position: top center;
   transform: scale(0.88);
