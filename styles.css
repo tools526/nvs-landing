@@ -1057,7 +1057,7 @@ a { color: inherit; text-decoration: none; }
   border: none;
 }
 .final-panel .h-display { color: var(--bg-card); }
-.final-panel .lead { color: rgba(245, 239, 228, 0.7); margin: 12px auto 24px; }
+.final-panel .lead { color: rgba(245, 239, 228, 0.7); margin: 8px auto 8px; }
 .final-panel .btn-primary { background: var(--accent); border-color: var(--accent); }
 .final-panel .btn-primary:hover { background: #3DCFBE; color: var(--ink); border-color: #3DCFBE; }
 .final-bg-pattern {
