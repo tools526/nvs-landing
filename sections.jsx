@@ -145,7 +145,7 @@ function Products() {
               <div className="product-wide-right">
                 <div className="product-card-head">
                   {p.id === 1
-                    ? <img src="uploads/Logo Iasdcon.png" alt="Jobescape" className="product-logo-img" />
+                    ? <img src="uploads/jobescape_logo.png" alt="Jobescape" className="product-logo-img" />
                     : <div className="product-mark" data-i={p.id}>{p.mark}</div>
                   }
                   <span className="product-tag">{p.tag}</span>
