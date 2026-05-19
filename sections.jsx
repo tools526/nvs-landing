@@ -715,9 +715,9 @@ function Careers() {
       <Reveal>
         <div className="panel careers-panel">
           <div>
-            <h2 className="h-section" style={{ marginTop: 0, marginBottom: 24 }}>Join NVS</h2>
+            <h2 className="h-section" style={{ marginTop: 0, marginBottom: 24 }}>Building something great?</h2>
             <p className="lead" style={{ marginBottom: 32 }}>
-              We're building systems that change how work gets done. If you care about speed, clarity, and real impact — you'll fit here.
+              We're always open to conversations with exceptional people — founders, product builders, potential partners, and investors who believe in what the AI-first era can unlock.
             </p>
             <a href="careers.html" className="btn btn-primary">
               View open roles
