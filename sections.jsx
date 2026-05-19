@@ -475,8 +475,8 @@ function HowWeWork() {
     <section className="section container" id="how">
       <Reveal className="section-head">
         <div className="section-head-text">
+          <p className="eyebrow">Move fast. Stay focused. Build things that last.</p>
           <h2 className="h-section" style={{ marginTop: 0 }}>How we work</h2>
-          <p className="how-subhead">Move fast. Stay focused. Build things that last.</p>
         </div>
         <p className="lead" style={{ maxWidth: '36ch' }}>
           Speed without direction is chaos. We combine startup velocity with a clear product vision — testing quickly, killing what doesn't work, and doubling down on what does.
