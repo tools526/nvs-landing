@@ -749,8 +749,7 @@ function FinalCTA() {
           <div className="final-bg-pattern"></div>
           <div style={{ position: 'relative' }}>
             <h2 className="h-display" style={{ margin: '0 auto 0', maxWidth: '14ch' }}>
-              Let's build<br/>
-              something <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>real</em>
+              Collaborate With Our <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>Vision</em>
             </h2>
             <p className="lead">
               Tell us what you're working on — we'll help you turn it into a system that scales.
