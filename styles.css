@@ -1152,7 +1152,6 @@ a { color: inherit; text-decoration: none; }
   .product-metric { padding: 16px 0; }
 }
 @media (max-width: 720px) {
-  :root { --section-y: 160px; }
   .container { padding: 0 18px; }
   .panel { padding: 32px 24px; border-radius: 22px; }
   .hero-panel { padding: 56px 28px 48px; }
