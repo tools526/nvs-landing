@@ -144,7 +144,10 @@ function Products() {
               {/* Right — name, desc (fades out on hover), photo (fades in on hover) */}
               <div className="product-wide-right">
                 <div className="product-card-head">
-                  <div className="product-mark" data-i={p.id}>{p.mark}</div>
+                  {p.id === 1
+                    ? <img src="uploads/Logo Iasdcon.png" alt="Jobescape" className="product-logo-img" />
+                    : <div className="product-mark" data-i={p.id}>{p.mark}</div>
+                  }
                   <span className="product-tag">{p.tag}</span>
                 </div>
                 <h3 className="h-card product-title">{p.name}</h3>
