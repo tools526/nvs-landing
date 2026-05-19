@@ -596,6 +596,18 @@ function MediaAboutUs() {
       desc: 'Kazakhstani startup JobEscape raises $700K from Tumar Venture, UAE funds, and Caucasus Ventures to scale globally.',
       href: 'https://digitalbusiness.kz/2024-06-17/kazahstanskiy-startap-jobescape-privlek-700-tisyach-investitsiy/',
     },
+    {
+      src: 'https://img.youtube.com/vi/7tPsP92y6Ek/hqdefault.jpg',
+      name: 'AlchemistX Accelerator',
+      desc: 'Kazakhstani startups in Silicon Valley — inside the AlchemistX accelerator and what it takes to compete globally.',
+      href: 'https://www.youtube.com/watch?v=7tPsP92y6Ek&t=17',
+    },
+    {
+      src: 'https://img.youtube.com/vi/2pqxUx6LOJI/hqdefault.jpg',
+      name: 'Miras Sovetov — Interview',
+      desc: 'JobEscape founder on building three startups, entering new markets, and why authentic connections beat traditional networking.',
+      href: 'https://youtu.be/2pqxUx6LOJI?si=LDsMrUnO5CAkljFA',
+    },
   ];
 
   const total = cards.length;
