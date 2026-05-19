@@ -101,7 +101,7 @@ function Products() {
     {
       id: 2,
       mark: 'G',
-      name: 'Genescape',
+      name: '7ART',
       tag: 'CREATIVE · IMAGE & VIDEO',
       url: 'https://genescape-go.vercel.app/artist/new',
       desc: 'All-in-one AI creator studio for images, video, music, and voiceovers — consistent styles across every project in one subscription.',
@@ -146,7 +146,7 @@ function Products() {
                 <div className="product-card-head">
                   {p.id === 1
                     ? <img src="uploads/jobescape_logo.png" alt="Jobescape" className="product-logo-img" />
-                    : <div className="product-mark" data-i={p.id}>{p.mark}</div>
+                    : <img src="uploads/IMG_2791.png" alt="7ART" className="product-logo-img" />
                   }
                   <span className="product-tag">{p.tag}</span>
                 </div>
@@ -787,7 +787,7 @@ function Footer() {
           <h4 className="footer-col-title">Products</h4>
           <ul>
             <li><a href="#">Jobescape</a></li>
-            <li><a href="#">Genescape</a></li>
+            <li><a href="#">7ART</a></li>
           </ul>
         </div>
         <div className="footer-col">
