@@ -87,13 +87,13 @@ function Products() {
   const jobescapeMetrics = [
     { value: '40K', label: 'Active users' },
     { value: '$1.4M', label: 'MRR' },
-    { value: '$32', label: 'CAC per user' },
+    { value: '$32', label: 'CAC / user' },
   ];
 
   const genescapeMetrics = [
-    { value: '7,000+', label: 'generations across image, video, music & voice' },
-    { value: '3,100+', label: 'AI-generated songs' },
-    { value: '340+', label: 'AI videos incl. Kling 3.0 & Seedance 2.0' },
+    { value: '7K+', label: 'Generations' },
+    { value: '3.1K+', label: 'AI songs' },
+    { value: '340+', label: 'AI videos' },
   ];
 
   return (
@@ -110,7 +110,7 @@ function Products() {
       </Reveal>
 
       <div className="products-stack">
-        {/* Jobescape — full width, metrics on right */}
+        {/* Jobescape */}
         <Reveal>
           <article className="product-card product-card-wide" onClick={() => window.open('https://jobescape.me', '_blank', 'noopener,noreferrer')} style={{ cursor: 'pointer' }}>
             <div className="product-wide-left">
@@ -119,21 +119,10 @@ function Products() {
                 <span className="product-tag">AI EDUCATION · SKILLS</span>
               </div>
               <h3 className="h-card product-title">Jobescape</h3>
-              <p className="product-desc">Jobescape — the first product in our ecosystem for people who want to get better at using AI. A platform that helps people learn how to use AI effectively and apply it in everyday tasks: automation, building agents and apps, websites, AI Influencers, and media content. Practical, outcome-focused training that guides users from their very first step.</p>
-              <div className="product-card-foot">
-                <span className="muted" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.04em' }}>
-                  PRODUCT 01
-                </span>
-                <a href="https://jobescape.me" target="_blank" rel="noopener noreferrer" className="arrow-link">
-                  Learn more
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M3 7h8m0 0L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
-              </div>
+              <p className="product-desc">The first product in our ecosystem for people who want to get better at AI — learn automation, agents, apps, and media creation through practical, outcome-focused training.</p>
+              <ProductVis i={1} />
             </div>
             <div className="product-wide-right">
-              <ProductVis i={1} />
               <div className="product-metrics">
                 {jobescapeMetrics.map((m) => (
                   <div key={m.label} className="product-metric">
@@ -146,7 +135,7 @@ function Products() {
           </article>
         </Reveal>
 
-        {/* Genescape — full width, metrics on right */}
+        {/* Genescape */}
         <Reveal delay={80}>
           <article className="product-card product-card-wide" onClick={() => window.open('https://genescape-go.vercel.app/artist/new', '_blank', 'noopener,noreferrer')} style={{ cursor: 'pointer' }}>
             <div className="product-wide-left">
@@ -155,21 +144,10 @@ function Products() {
                 <span className="product-tag">CREATIVE · IMAGE & VIDEO</span>
               </div>
               <h3 className="h-card product-title">Genescape</h3>
-              <p className="product-desc">Genescape is an all-in-one AI creator studio for marketers, creators, and small studios — generate high-quality images, videos, music, and voiceovers without switching between apps. Top-tier AI models and pre-tuned templates let users produce complex projects with consistent characters and styles. One subscription, commercial licensing, no dedicated production team needed.</p>
-              <div className="product-card-foot">
-                <span className="muted" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.04em' }}>
-                  PRODUCT 02
-                </span>
-                <a href="https://genescape-go.vercel.app/artist/new" target="_blank" rel="noopener noreferrer" className="arrow-link">
-                  Learn more
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M3 7h8m0 0L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
-              </div>
+              <p className="product-desc">All-in-one AI creator studio — images, video, music, and voiceovers in one subscription. Pre-tuned templates and top AI models keep characters and styles consistent across every project.</p>
+              <ProductVis i={2} />
             </div>
             <div className="product-wide-right">
-              <ProductVis i={2} />
               <div className="product-metrics">
                 {genescapeMetrics.map((m) => (
                   <div key={m.label} className="product-metric">

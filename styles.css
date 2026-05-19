@@ -399,13 +399,13 @@ a { color: inherit; text-decoration: none; }
 .products-stack {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 48px;
 }
 .product-card-wide {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
+  grid-template-columns: 1fr 280px;
+  gap: 48px;
+  align-items: center;
 }
 .product-wide-left {
   display: flex;
@@ -415,34 +415,41 @@ a { color: inherit; text-decoration: none; }
 .product-wide-right {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
+  align-self: center;
 }
 .product-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .product-metric {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 16px;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
   background: var(--bg-card);
   border: 1px solid var(--rule);
   border-radius: var(--radius-sm);
+  transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+}
+.product-card:hover .product-metric {
+  border-color: var(--rule-2);
 }
 .product-metric-value {
   font-family: var(--serif);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
-  color: var(--ink);
-  letter-spacing: -0.02em;
+  color: var(--accent);
+  letter-spacing: -0.03em;
   line-height: 1;
+  min-width: 72px;
+  flex-shrink: 0;
 }
 .product-metric-label {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--ink-3);
-  line-height: 1.4;
+  line-height: 1.35;
 }
 .product-card {
   background: var(--bg-elev);
@@ -1068,15 +1075,16 @@ a { color: inherit; text-decoration: none; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 960px) {
-  .product-card-wide { grid-template-columns: 1fr; gap: 24px; }
-  .product-metrics { grid-template-columns: repeat(3, 1fr); }
+  .product-card-wide { grid-template-columns: 1fr; gap: 28px; }
+  .product-metrics { flex-direction: row; flex-wrap: wrap; }
+  .product-metric { flex: 1 1 140px; }
 }
 @media (max-width: 720px) {
   .container { padding: 0 18px; }
   .panel { padding: 32px 24px; border-radius: 22px; }
   .hero-panel { padding: 56px 28px 48px; }
   .products-grid, .cases-grid, .team-grid { grid-template-columns: 1fr; }
-  .product-metrics { grid-template-columns: 1fr 1fr; }
+  .product-metric { flex: 1 1 100%; }
   .how-grid { grid-template-columns: 1fr; }
   .metrics { grid-template-columns: 1fr; }
   .logo-row { grid-template-columns: repeat(3, 1fr); }
