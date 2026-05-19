@@ -579,28 +579,22 @@ function MediaAboutUs() {
 
   const cards = [
     {
-      src: 'uploads/photo_2026-05-12_15-50-31.jpg',
-      name: 'NVS in TechCrunch',
-      desc: 'The studio that ships products in weeks, not years — how NVS is rewriting the venture playbook.',
-      href: '#',
+      src: 'uploads/miras-sovetov-3-1024x684.jpg',
+      name: 'Astana Hub',
+      desc: 'A Kazakhstani entrepreneur launched a platform teaching businesses how to build AI bots — already valued at $50M.',
+      href: 'https://astanahub.com/en/article/kazakhstanets-zapustil-platformu-gde-obuchaiut-sozdaniiu-ai-botov-dlia-biznesa-ego-proekt-uzhe-otsenili-v',
     },
     {
-      src: 'uploads/photo_2026-05-12_15-50-49.jpg',
-      name: 'Forbes Feature',
-      desc: 'AI studios are the new accelerators. Inside the operators building the next generation of software.',
-      href: '#',
+      src: 'uploads/miras-sovetov-1-1024x683.jpg',
+      name: 'Digital Business',
+      desc: 'JobEscape co-founder on securing $350K from UAE investors: take risks, show traction, and network relentlessly.',
+      href: 'https://digitalbusiness.kz/2025-05-30/nuzhno-riskovat-i-prigat-s-golovoy-a-ne-malodushnichat-kazahstanskiy-startaper-rasskazal-kak-poluchit-dengi-v-oae/',
     },
     {
-      src: 'uploads/photo_2026-05-12_15-50-58.jpg',
-      name: 'Sifted Report',
-      desc: "Central Asia's quiet AI powerhouse — NVS and the founders building from Almaty to the world.",
-      href: '#',
-    },
-    {
-      src: 'uploads/photo_2026-05-12_15-51-14.jpg',
-      name: 'Product Hunt #1',
-      desc: 'Jobescape topped the charts — Product of the Week and a sign of what AI-native hiring tools can do.',
-      href: '#',
+      src: 'uploads/12e8542b19fe11b442a480d0005c191e_1280x720-1024x646.jpeg',
+      name: 'Digital Business',
+      desc: 'Kazakhstani startup JobEscape raises $700K from Tumar Venture, UAE funds, and Caucasus Ventures to scale globally.',
+      href: 'https://digitalbusiness.kz/2024-06-17/kazahstanskiy-startap-jobescape-privlek-700-tisyach-investitsiy/',
     },
   ];
 
