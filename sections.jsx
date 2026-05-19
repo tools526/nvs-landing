@@ -430,7 +430,11 @@ function Capabilities() {
         <div className="cap-list">
           {items.map((it) => (
             <div className="cap-item" key={it.n}>
-              <span className="cap-badge">{it.n}</span>
+              <span className="cap-bookmark">
+                <svg width="22" height="28" viewBox="0 0 22 28" fill="none">
+                  <path d="M2 2h18v24l-9-6-9 6V2z" fill="var(--accent-tint)" stroke="var(--accent)" strokeWidth="1.6" strokeLinejoin="round"/>
+                </svg>
+              </span>
               <span className="cap-title">{it.title}</span>
               <p className="cap-desc">{it.desc}</p>
             </div>
