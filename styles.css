@@ -1161,7 +1161,6 @@ a { color: inherit; text-decoration: none; }
 .media-track {
   display: flex;
   gap: 24px;
-  transition: transform 0.5s var(--ease);
 }
 
 .media-card {

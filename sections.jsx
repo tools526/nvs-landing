@@ -602,13 +602,47 @@ function MediaAboutUs() {
   ];
 
   const total = cards.length;
-  const prev = () => setActive(a => (a - 1 + total) % total);
-  const next = () => setActive(a => (a + 1) % total);
+  // Append clone of first card so the last real card always has a neighbour
+  const track = [...cards, cards[0]];
+
+  const [animated, setAnimated] = React.useState(true);
+
+  const goTo = (idx, anim = true) => {
+    setAnimated(anim);
+    setActive(idx);
+  };
+
+  const prev = () => goTo((active - 1 + total) % total);
+  const next = () => {
+    if (active === total - 1) {
+      // slide to clone, then instantly snap to real index 0
+      goTo(total);
+      setTimeout(() => goTo(0, false), 500);
+    } else {
+      goTo(active + 1);
+    }
+  };
 
   React.useEffect(() => {
-    const id = setInterval(() => setActive(a => (a + 1) % total), 4000);
+    const id = setInterval(() => {
+      setActive(a => {
+        if (a === total - 1) {
+          // animate to clone index, then snap back
+          setAnimated(true);
+          setTimeout(() => {
+            setAnimated(false);
+            setActive(0);
+          }, 500);
+          return total; // slide to clone
+        }
+        setAnimated(true);
+        return a + 1;
+      });
+    }, 4000);
     return () => clearInterval(id);
   }, [total]);
+
+  const dotIndex = active >= total ? 0 : active;
 
   return (
     <section className="section container" id="media">
@@ -626,9 +660,14 @@ function MediaAboutUs() {
 
       <div className="media-carousel">
         <div className="media-carousel-wrap">
-          {/* each card = calc(50% - 12px), gap = 24px → step = card + gap = calc(50% + 12px) */}
-          <div className="media-track" style={{ transform: `translateX(calc(-${active} * (50% + 12px)))` }}>
-            {cards.map((c, i) => (
+          <div
+            className="media-track"
+            style={{
+              transform: `translateX(calc(-${active} * (50% + 12px)))`,
+              transition: animated ? 'transform 0.5s var(--ease)' : 'none',
+            }}
+          >
+            {track.map((c, i) => (
               <a key={i} href={c.href} className="media-card" target="_blank" rel="noopener noreferrer">
                 <img src={c.src} alt={c.name} loading="lazy" />
                 <div className="media-card-overlay">
@@ -660,7 +699,7 @@ function MediaAboutUs() {
 
         <div className="media-dots">
           {cards.map((_, i) => (
-            <button key={i} className={`media-dot${i === active ? ' active' : ''}`} onClick={() => setActive(i)} aria-label={`Go to slide ${i + 1}`} />
+            <button key={i} className={`media-dot${i === dotIndex ? ' active' : ''}`} onClick={() => goTo(i)} aria-label={`Go to slide ${i + 1}`} />
           ))}
         </div>
       </div>
