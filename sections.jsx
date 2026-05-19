@@ -84,16 +84,33 @@ function Hero() {
 
 /* -------- PRODUCTS -------- */
 function Products() {
-  const jobescapeMetrics = [
-    { value: '40K', label: 'Active users' },
-    { value: '$1.4M', label: 'MRR' },
-    { value: '$32', label: 'CAC / user' },
-  ];
-
-  const genescapeMetrics = [
-    { value: '7K+', label: 'Generations' },
-    { value: '3.1K+', label: 'AI songs' },
-    { value: '340+', label: 'AI videos' },
+  const products = [
+    {
+      id: 1,
+      mark: 'J',
+      name: 'Jobescape',
+      tag: 'AI EDUCATION · SKILLS',
+      url: 'https://jobescape.me',
+      desc: 'Learn AI effectively and apply it in everyday tasks — automation, agents, apps, and media creation. Practical, outcome-focused training.',
+      metrics: [
+        { value: '40K', label: 'Active users' },
+        { value: '$1.4M', label: 'MRR' },
+        { value: '$32', label: 'CAC / user' },
+      ],
+    },
+    {
+      id: 2,
+      mark: 'G',
+      name: 'Genescape',
+      tag: 'CREATIVE · IMAGE & VIDEO',
+      url: 'https://genescape-go.vercel.app/artist/new',
+      desc: 'All-in-one AI creator studio for images, video, music, and voiceovers — consistent styles across every project in one subscription.',
+      metrics: [
+        { value: '7K+', label: 'Generations' },
+        { value: '3.1K+', label: 'AI songs' },
+        { value: '340+', label: 'AI videos' },
+      ],
+    },
   ];
 
   return (
@@ -110,55 +127,35 @@ function Products() {
       </Reveal>
 
       <div className="products-stack">
-        {/* Jobescape */}
-        <Reveal>
-          <article className="product-card product-card-wide" onClick={() => window.open('https://jobescape.me', '_blank', 'noopener,noreferrer')} style={{ cursor: 'pointer' }}>
-            <div className="product-wide-left">
-              <div className="product-card-head">
-                <div className="product-mark" data-i={1}>J</div>
-                <span className="product-tag">AI EDUCATION · SKILLS</span>
+        {products.map((p, i) => (
+          <Reveal key={p.id} delay={i * 80}>
+            <article className="product-card product-card-wide" onClick={() => window.open(p.url, '_blank', 'noopener,noreferrer')} style={{ cursor: 'pointer' }}>
+              {/* Left — metrics */}
+              <div className="product-wide-left">
+                <div className="product-metrics">
+                  {p.metrics.map((m) => (
+                    <div key={m.label} className="product-metric">
+                      <span className="product-metric-value">{m.value}</span>
+                      <span className="product-metric-label">{m.label}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <h3 className="h-card product-title">Jobescape</h3>
-              <p className="product-desc">The first product in our ecosystem for people who want to get better at AI — learn automation, agents, apps, and media creation through practical, outcome-focused training.</p>
-              <ProductVis i={1} />
-            </div>
-            <div className="product-wide-right">
-              <div className="product-metrics">
-                {jobescapeMetrics.map((m) => (
-                  <div key={m.label} className="product-metric">
-                    <span className="product-metric-value">{m.value}</span>
-                    <span className="product-metric-label">{m.label}</span>
-                  </div>
-                ))}
+              {/* Right — name, desc (fades out on hover), photo (fades in on hover) */}
+              <div className="product-wide-right">
+                <div className="product-card-head">
+                  <div className="product-mark" data-i={p.id}>{p.mark}</div>
+                  <span className="product-tag">{p.tag}</span>
+                </div>
+                <h3 className="h-card product-title">{p.name}</h3>
+                <p className="product-desc product-desc-fadeable">{p.desc}</p>
+                <div className="product-hover-img">
+                  <img src={p.id === 1 ? 'assets/jobescape.png' : 'assets/genescape.png'} alt={p.name + ' preview'} />
+                </div>
               </div>
-            </div>
-          </article>
-        </Reveal>
-
-        {/* Genescape */}
-        <Reveal delay={80}>
-          <article className="product-card product-card-wide" onClick={() => window.open('https://genescape-go.vercel.app/artist/new', '_blank', 'noopener,noreferrer')} style={{ cursor: 'pointer' }}>
-            <div className="product-wide-left">
-              <div className="product-card-head">
-                <div className="product-mark" data-i={2}>G</div>
-                <span className="product-tag">CREATIVE · IMAGE & VIDEO</span>
-              </div>
-              <h3 className="h-card product-title">Genescape</h3>
-              <p className="product-desc">All-in-one AI creator studio — images, video, music, and voiceovers in one subscription. Pre-tuned templates and top AI models keep characters and styles consistent across every project.</p>
-              <ProductVis i={2} />
-            </div>
-            <div className="product-wide-right">
-              <div className="product-metrics">
-                {genescapeMetrics.map((m) => (
-                  <div key={m.label} className="product-metric">
-                    <span className="product-metric-value">{m.value}</span>
-                    <span className="product-metric-label">{m.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </article>
-        </Reveal>
+            </article>
+          </Reveal>
+        ))}
       </div>
     </section>
   );
