@@ -527,15 +527,15 @@ function CaseStudies() {
 /* -------- TEAM -------- */
 function Team() {
   const photos = [
-    { id: 1, src: 'uploads/image.png', name: 'Team Member', role: 'Role' },
-    { id: 2, src: 'uploads/photo_2026-05-12_15-50-31.jpg', name: 'Team Member', role: 'Role' },
-    { id: 3, src: 'uploads/photo_2026-05-12_15-50-49.jpg', name: 'Team Member', role: 'Role' },
-    { id: 4, src: 'uploads/photo_2026-05-12_15-50-58.jpg', name: 'Team Member', role: 'Role' },
-    { id: 5, src: 'uploads/photo_2026-05-12_15-51-14.jpg', name: 'Team Member', role: 'Role' },
-    { id: 6, src: 'uploads/photo_2026-05-12_15-51-25.jpg', name: 'Team Member', role: 'Role' },
-    { id: 7, src: 'uploads/photo_2026-05-12_15-51-56.jpg', name: 'Team Member', role: 'Role' },
-    { id: 8, src: 'uploads/photo_2026-05-12_15-51-59.jpg', name: 'Team Member', role: 'Role' },
-    { id: 9, src: 'uploads/photo_2026-05-12_15-52-03.jpg', name: 'Team Member', role: 'Role' },
+    { id: 1, src: 'team_img/5197443047514379357.jpg', name: 'Team Member', role: 'Role' },
+    { id: 2, src: 'team_img/5199694847328064623.jpg', name: 'Team Member', role: 'Role' },
+    { id: 3, src: 'team_img/5224520952299853360.jpg', name: 'Team Member', role: 'Role' },
+    { id: 4, src: 'team_img/5424713681519901384.jpg', name: 'Team Member', role: 'Role' },
+    { id: 5, src: 'team_img/5427009251349040558.jpg', name: 'Team Member', role: 'Role' },
+    { id: 6, src: 'team_img/IMG_3467 (1).jpg', name: 'Team Member', role: 'Role' },
+    { id: 7, src: 'team_img/IMG_7163.jpg', name: 'Team Member', role: 'Role' },
+    { id: 8, src: 'team_img/photo_2026-05-12_15-50-31.jpg', name: 'Team Member', role: 'Role' },
+    { id: 9, src: 'team_img/photo_2026-05-12_15-51-25.jpg', name: 'Team Member', role: 'Role' },
   ];
 
   return (
