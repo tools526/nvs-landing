@@ -438,7 +438,7 @@ function Capabilities() {
       <Reveal className="section-head">
         <div className="section-head-text">
           <h2 className="h-section" style={{ marginTop: 0 }}>What we do</h2>
-          <p className="cap-subheading">From zero to global — that's the only direction we know</p>
+          <p className="eyebrow">From zero to global — that's the only direction we know</p>
         </div>
         <p className="lead" style={{ maxWidth: '42ch' }}>
           We identify high-potential markets, assemble the right team, and build products from scratch using modern AI-first approaches. Then we scale them to millions of users.
