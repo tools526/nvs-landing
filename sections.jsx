@@ -540,9 +540,15 @@ function Team() {
 
   return (
     <section className="section container team-photos-section" id="team">
-      <div className="team-photos-head">
-        <h2 className="h-section">Our team</h2>
-      </div>
+      <Reveal className="section-head">
+        <div className="section-head-text">
+          <p className="eyebrow">The people behind it</p>
+          <h2 className="h-section" style={{ marginTop: 0 }}>We work with people we'd choose again.</h2>
+        </div>
+        <p className="lead" style={{ maxWidth: '36ch' }}>
+          We hire for ownership, not titles — and we build an environment where talented people do their best work.
+        </p>
+      </Reveal>
       <div className="team-photos-grid">
         {photos.map(p => (
           <div className="team-photo-cell" key={p.id}>
