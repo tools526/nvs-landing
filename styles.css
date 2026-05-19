@@ -1158,15 +1158,15 @@ a { color: inherit; text-decoration: none; }
 .media-track {
   display: flex;
   transition: transform 0.5s var(--ease);
-  width: 300%;
+  width: 150%; /* 3 cards × 50% each */
 }
 
-/* Each card takes exactly 1/3 of the track = 100% of carousel width */
+/* Each card = 50% of track = one half of carousel width */
 .media-card {
   flex: 0 0 calc(100% / 3);
   position: relative;
   display: block;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   text-decoration: none;
   cursor: pointer;

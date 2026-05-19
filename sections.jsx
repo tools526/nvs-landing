@@ -595,14 +595,20 @@ function MediaAboutUs() {
     },
   ];
 
-  const prev = () => setActive(a => (a - 1 + cards.length) % cards.length);
-  const next = () => setActive(a => (a + 1) % cards.length);
+  const total = cards.length;
+  const prev = () => setActive(a => (a - 1 + total) % total);
+  const next = () => setActive(a => (a + 1) % total);
+
+  React.useEffect(() => {
+    const id = setInterval(() => setActive(a => (a + 1) % total), 4000);
+    return () => clearInterval(id);
+  }, [total]);
 
   return (
     <section className="section container" id="media">
       <Reveal>
         <p className="eyebrow" style={{ marginBottom: 20 }}>Recognition</p>
-        <div className="section-head" style={{ marginBottom: 56, alignItems: 'flex-start' }}>
+        <div className="section-head" style={{ marginBottom: 48, alignItems: 'flex-start' }}>
           <div className="section-head-text">
             <h2 className="h-section" style={{ marginTop: 0 }}>Media about us</h2>
           </div>
@@ -613,7 +619,8 @@ function MediaAboutUs() {
       </Reveal>
 
       <div className="media-carousel">
-        <div className="media-track" style={{ transform: `translateX(calc(-${active} * 33.3333%))` }}>
+        {/* track: 3 cards × 50% each = 150% wide; shift by 50% per step */}
+        <div className="media-track" style={{ transform: `translateX(calc(-${active} * 50%))` }}>
           {cards.map((c, i) => (
             <a key={i} href={c.href} className="media-card" target="_blank" rel="noopener noreferrer">
               <img src={c.src} alt={c.name} loading="lazy" />
