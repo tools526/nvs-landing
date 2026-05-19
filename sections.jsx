@@ -540,12 +540,16 @@ function Team() {
 
   return (
     <section className="section container team-photos-section" id="team">
-      <Reveal className="section-head" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: 16 }}>
-        <p className="eyebrow">We work with people we'd choose again</p>
-        <h2 className="h-section" style={{ marginTop: 0 }}>The people behind it</h2>
-        <p className="lead" style={{ maxWidth: '48ch', marginTop: 4 }}>
-          We hire for ownership, not titles — and we build an environment where talented people do their best work.
-        </p>
+      <Reveal>
+        <p className="eyebrow" style={{ marginBottom: 20 }}>We work with people we'd choose again</p>
+        <div className="section-head" style={{ marginBottom: 56, alignItems: 'flex-start' }}>
+          <div className="section-head-text">
+            <h2 className="h-section" style={{ marginTop: 0 }}>The people behind it</h2>
+          </div>
+          <p className="lead" style={{ maxWidth: '36ch', marginTop: 0 }}>
+            We hire for ownership, not titles — and we build an environment where talented people do their best work.
+          </p>
+        </div>
       </Reveal>
       <div className="team-photos-grid">
         {photos.map(p => (
