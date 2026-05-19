@@ -1149,25 +1149,28 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============ Media About Us — Carousel ============ */
-.media-carousel {
-  position: relative;
+.media-carousel-wrap {
   overflow: hidden;
   border-radius: var(--radius-card);
 }
 
-.media-track {
-  display: flex;
-  transition: transform 0.5s var(--ease);
-  width: 150%; /* 3 cards × 50% each */
+.media-carousel {
+  position: relative;
 }
 
-/* Each card = 50% of track = one half of carousel width */
+.media-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s var(--ease);
+}
+
 .media-card {
-  flex: 0 0 calc(100% / 3);
+  flex: 0 0 calc(50% - 12px); /* 2 visible, gap=24px → each = 50% - half-gap */
   position: relative;
   display: block;
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  border-radius: var(--radius-card);
   text-decoration: none;
   cursor: pointer;
 }

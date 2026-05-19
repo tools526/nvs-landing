@@ -619,24 +619,26 @@ function MediaAboutUs() {
       </Reveal>
 
       <div className="media-carousel">
-        {/* track: 3 cards × 50% each = 150% wide; shift by 50% per step */}
-        <div className="media-track" style={{ transform: `translateX(calc(-${active} * 50%))` }}>
-          {cards.map((c, i) => (
-            <a key={i} href={c.href} className="media-card" target="_blank" rel="noopener noreferrer">
-              <img src={c.src} alt={c.name} loading="lazy" />
-              <div className="media-card-overlay">
-                <div className="media-play-btn">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M8 6.5l9 4.5-9 4.5V6.5z" fill="currentColor"/>
-                  </svg>
+        <div className="media-carousel-wrap">
+          {/* each card = calc(50% - 12px), gap = 24px → step = card + gap = calc(50% + 12px) */}
+          <div className="media-track" style={{ transform: `translateX(calc(-${active} * (50% + 12px)))` }}>
+            {cards.map((c, i) => (
+              <a key={i} href={c.href} className="media-card" target="_blank" rel="noopener noreferrer">
+                <img src={c.src} alt={c.name} loading="lazy" />
+                <div className="media-card-overlay">
+                  <div className="media-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                      <path d="M8 6.5l9 4.5-9 4.5V6.5z" fill="currentColor"/>
+                    </svg>
+                  </div>
+                  <div className="media-card-text">
+                    <span className="media-card-name">{c.name}</span>
+                    <span className="media-card-desc">{c.desc}</span>
+                  </div>
                 </div>
-                <div className="media-card-text">
-                  <span className="media-card-name">{c.name}</span>
-                  <span className="media-card-desc">{c.desc}</span>
-                </div>
-              </div>
-            </a>
-          ))}
+              </a>
+            ))}
+          </div>
         </div>
 
         <button className="media-nav media-nav-prev" onClick={prev} aria-label="Previous">
