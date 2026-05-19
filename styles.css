@@ -1050,7 +1050,7 @@ a { color: inherit; text-decoration: none; }
 /* ============ FINAL CTA ============ */
 .final-panel {
   text-align: center;
-  padding: 120px 64px;
+  padding: 72px 64px;
   background: var(--ink);
   color: var(--bg-card);
   border: none;
