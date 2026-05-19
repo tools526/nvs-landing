@@ -492,45 +492,6 @@ function HowWeWork() {
   );
 }
 
-/* -------- SOCIAL PROOF -------- */
-function SocialProof() {
-  const logos = ['Northwind', 'Atlas', 'Lumen', 'Helix', 'Verge', 'Orbit'];
-  return (
-    <section className="section container" id="proof">
-      <Reveal>
-        <div className="panel proof-panel">
-          <h2 className="h-section proof-title" style={{ marginTop: 0 }}>
-            Trusted by teams<br/>building <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>real</em> products
-          </h2>
-
-          <div className="metrics">
-            <div className="metric">
-              <div className="metric-num"><span className="accent">50+</span></div>
-              <p className="metric-label">Systems delivered to production</p>
-            </div>
-            <div className="metric">
-              <div className="metric-num">Fast-growing</div>
-              <p className="metric-label">Used by teams scaling 3–10×</p>
-            </div>
-            <div className="metric">
-              <div className="metric-num"><span className="accent">M+</span></div>
-              <p className="metric-label">Automated actions processed monthly</p>
-            </div>
-          </div>
-
-          <div className="logo-row">
-            {logos.map(l => (
-              <div className="logo-placeholder" key={l}>{l}</div>
-            ))}
-          </div>
-          <p className="muted" style={{ fontSize: 12, marginTop: 24, fontFamily: 'var(--mono)', letterSpacing: '0.04em' }}>
-            CLIENT LOGOS — PLACEHOLDER
-          </p>
-        </div>
-      </Reveal>
-    </section>
-  );
-}
 
 /* -------- CASE STUDIES -------- */
 function CaseStudies() {
@@ -716,5 +677,5 @@ function Footer() {
 
 Object.assign(window, {
   Reveal, Nav, Hero, Products, Capabilities, HowWeWork,
-  SocialProof, CaseStudies, Team, Careers, FinalCTA, Footer,
+  CaseStudies, Team, Careers, FinalCTA, Footer,
 });
