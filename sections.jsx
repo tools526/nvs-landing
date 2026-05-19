@@ -84,23 +84,16 @@ function Hero() {
 
 /* -------- PRODUCTS -------- */
 function Products() {
-  const products = [
-    {
-      id: 1,
-      mark: 'J',
-      name: 'Jobescape',
-      tag: 'CAREER · AI COACH',
-      desc: 'A personal AI plan for landing your next role — skills tracking, daily streaks, AI assistants for interviews and outreach, and certified completion.',
-      url: 'https://jobescape.me',
-    },
-    {
-      id: 2,
-      mark: 'G',
-      name: 'Genescape',
-      tag: 'CREATIVE · IMAGE & VIDEO',
-      desc: 'Pick a character, pick an app, done. A studio of AI image, video and music apps for creators — from headshots and portraits to viral video formats.',
-      url: 'https://genescape-go.vercel.app/artist/new',
-    },
+  const jobescapeMetrics = [
+    { value: '40K', label: 'Active users' },
+    { value: '$1.4M', label: 'MRR' },
+    { value: '$32', label: 'CAC per user' },
+  ];
+
+  const genescapeMetrics = [
+    { value: '7,000+', label: 'generations across image, video, music & voice' },
+    { value: '3,100+', label: 'AI-generated songs' },
+    { value: '340+', label: 'AI videos incl. Kling 3.0 & Seedance 2.0' },
   ];
 
   return (
@@ -116,31 +109,78 @@ function Products() {
         </p>
       </Reveal>
 
-      <div className="products-grid">
-        {products.map((p, i) => (
-          <Reveal key={p.id} delay={i * 80}>
-            <article className="product-card" onClick={() => window.open(p.url, '_blank', 'noopener,noreferrer')} style={{ cursor: 'pointer' }}>
+      <div className="products-stack">
+        {/* Jobescape — full width, metrics on right */}
+        <Reveal>
+          <article className="product-card product-card-wide" onClick={() => window.open('https://jobescape.me', '_blank', 'noopener,noreferrer')} style={{ cursor: 'pointer' }}>
+            <div className="product-wide-left">
               <div className="product-card-head">
-                <div className="product-mark" data-i={p.id}>{p.mark}</div>
-                <span className="product-tag">{p.tag}</span>
+                <div className="product-mark" data-i={1}>J</div>
+                <span className="product-tag">AI EDUCATION · SKILLS</span>
               </div>
-              <h3 className="h-card product-title">{p.name}</h3>
-              <p className="product-desc">{p.desc}</p>
-              <ProductVis i={p.id} />
+              <h3 className="h-card product-title">Jobescape</h3>
+              <p className="product-desc">Jobescape — the first product in our ecosystem for people who want to get better at using AI. A platform that helps people learn how to use AI effectively and apply it in everyday tasks: automation, building agents and apps, websites, AI Influencers, and media content. Practical, outcome-focused training that guides users from their very first step.</p>
               <div className="product-card-foot">
                 <span className="muted" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.04em' }}>
-                  PRODUCT 0{p.id}
+                  PRODUCT 01
                 </span>
-                <a href={p.url} target="_blank" rel="noopener noreferrer" className="arrow-link">
+                <a href="https://jobescape.me" target="_blank" rel="noopener noreferrer" className="arrow-link">
                   Learn more
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M3 7h8m0 0L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </a>
               </div>
-            </article>
-          </Reveal>
-        ))}
+            </div>
+            <div className="product-wide-right">
+              <ProductVis i={1} />
+              <div className="product-metrics">
+                {jobescapeMetrics.map((m) => (
+                  <div key={m.label} className="product-metric">
+                    <span className="product-metric-value">{m.value}</span>
+                    <span className="product-metric-label">{m.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </article>
+        </Reveal>
+
+        {/* Genescape — full width, metrics on right */}
+        <Reveal delay={80}>
+          <article className="product-card product-card-wide" onClick={() => window.open('https://genescape-go.vercel.app/artist/new', '_blank', 'noopener,noreferrer')} style={{ cursor: 'pointer' }}>
+            <div className="product-wide-left">
+              <div className="product-card-head">
+                <div className="product-mark" data-i={2}>G</div>
+                <span className="product-tag">CREATIVE · IMAGE & VIDEO</span>
+              </div>
+              <h3 className="h-card product-title">Genescape</h3>
+              <p className="product-desc">Genescape is an all-in-one AI creator studio for marketers, creators, and small studios — generate high-quality images, videos, music, and voiceovers without switching between apps. Top-tier AI models and pre-tuned templates let users produce complex projects with consistent characters and styles. One subscription, commercial licensing, no dedicated production team needed.</p>
+              <div className="product-card-foot">
+                <span className="muted" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.04em' }}>
+                  PRODUCT 02
+                </span>
+                <a href="https://genescape-go.vercel.app/artist/new" target="_blank" rel="noopener noreferrer" className="arrow-link">
+                  Learn more
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M3 7h8m0 0L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div className="product-wide-right">
+              <ProductVis i={2} />
+              <div className="product-metrics">
+                {genescapeMetrics.map((m) => (
+                  <div key={m.label} className="product-metric">
+                    <span className="product-metric-value">{m.value}</span>
+                    <span className="product-metric-label">{m.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </article>
+        </Reveal>
       </div>
     </section>
   );
